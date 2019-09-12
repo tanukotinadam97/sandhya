@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book</title>
+    <script>
+function submit1(){
+    var Name=document.getElementById("1").value;
+    var Mobile=document.getElementById("2").value;
+    var Email=document.getElementById("3").value;
+    var Category=document.getElementById("4").value;
+    var type=document.getElementById("5").value;
+    var days=document.getElementById("6").value;
+   // document.write(Category);
+    if(Name.length>=5&&Mobile.length==10&&days<=30)
+    {
+        var amount=5*days;
+        alert("amount to be paid"+amount);
+    }
+    else
+    {
+alert("enter valid data");
+    }
+}
+    </script>
+    <style>
+        .form{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form class="form">
+            <h1>City Library</h1>
+        <table align="center">
+            <tr>
+                <td><label>Customer Name</label></td>
+                <td><input type="text" id="1" name="name" minlength="5" required ></td>
+            </tr>
+            <tr>
+                <td><label>Mobile Number</label></td>
+                <td><input type="number" id="2" name="mobile" maxlength="10" minlength="10"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="email" id="3" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label>Category</label></td>
+                <td>
+                        <select id="4" size="1" >
+                                <option value="">Choose </option>
+                                <option>Kids</option>
+                                <option>Adults</option>
+                         </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label> Book Type</label></td>
+                <td> <select id="5" size="1" >
+                        <option value="">Choose </option>
+                        <option>Politics</option>
+                        <option>Cosmics</option>
+                        <option>Travel Stories</option>
+                        <option>Science</option>
+                        <option>Cinema</option>
+                        <option>Sports</option>
+                 </select></td>
+            </tr>
+            <tr>
+                <td><label>No of Days</label></td>
+                <td><input type="number" name="days" id="6" minlength="1" maxlength="30"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Book" onclick="submit1()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
